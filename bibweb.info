@@ -439,6 +439,8 @@ bibweb can be run with several different options.
 `-b BACKEND'
 `--bibtex=BACKEND'
      Use BACKEND as bibliography backend. The default value is `bibtex'.
+     Note that choosing `biber' as BACKEND enables lax comments in
+     BibTeX.
 
 `-lax'
      Use `%' to comment lines in BibTeX.  The default behavior is to
@@ -523,6 +525,6 @@ Node: Citations4712
 Node: Invoking bibweb8345
 Node: Basic operation8583
 Node: Options13577
-Node: Installation16990
+Node: Installation17070
 
 End Tag Table

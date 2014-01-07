@@ -584,6 +584,8 @@ semicolon (;)
 @item -b @var{backend}
 @itemx --bibtex=@var{backend}
 Use @var{backend} as bibliography backend. The default value is @samp{bibtex}.
+Note that choosing @samp{biber} as @var{backend} enables lax comments in
+Bib@TeX{}.
 
 @item -lax
 Use @samp{%} to comment lines in Bib@TeX{}.  The default behavior is to
