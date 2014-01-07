@@ -127,8 +127,9 @@ if ($bibtex =~ / ^bibtex$|^biber$ /x ) {
   } else {
     print "Warning: Your choice of \`$bibtex\' as bibliography backend is not one of the recommended choices. Proceeding anyway...\n\n";
 }
-if ($bibtex =~ / ^biber$ /x ) {
+if ($bibtex eq 'biber' ) {
   $lax_comments = 1;
+  $bibtex = "$bibtex --nodieonerror";
 }
 
 if ($e_math eq 'www.ams.org') {$redirect = 'Providence%2C+RI+USA'}
