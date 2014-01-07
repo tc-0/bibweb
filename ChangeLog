@@ -1,3 +1,7 @@
+2014-01-07	Tobias Columbus <columbus@kit.edu>
+
+	* bibweb: added (experimental) biber backend.
+
 2012-09-24  John Palmieri  <palmieri@jpalmieri538.math.washington.edu>
 
 	* released version 0.62.
