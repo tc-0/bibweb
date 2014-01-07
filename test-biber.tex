@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{test-biber.bib}
+\begin{document}
+
+Note: bibweb will not resolve every citation here: it will only
+resolve the ones listed as having ``one match''.
+
+\cite{adams;hopf-invariant-one}		% should produce two matches
+
+% \cite{palmieri.j*}			% too many matches
+
+\cite{kan-miller-splitting-spaces}	% one match
+
+\cite{kan-miller;splitting-spaces}	% one match, might be faster
+					% than previous one
+
+\cite{hopkins.m*;global}		% one match
+
+\cite{serre.j*}				% too many
+
+\cite{serre-kan}			% no matches
+
+% \cite{palmieri->95}			% several matches
+
+\cite{serre-faisceaux}			% too many
+
+\cite{miller-wilkerson-vanishing}	% two matches
+
+% \cite{miller-wilkerson-vanishing-<1985}	% two matches, slow
+
+\cite{miller-wilkerson;vanishing-steenrod}	% one match
+
+\cite{miller-wilkerson;vanishing-steenrod;pure}	% one match
+
+% \cite{miller-wilkerson;vanishing-steenrod;pure;<1985}	 % one match, slow
+
+\cite{devinatz-hopkins-nilpotence}	% two matches
+
+\cite{hopkins-devinatz-nilpotence}	% four matches
+
+% \cite{palmieri-<1993}			% too many, slow
+
+\cite{brown-comenetz}			% 2 matches
+
+\printbibliography
+
+\end{document}
