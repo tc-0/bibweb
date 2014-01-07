@@ -1,376 +1,433 @@
-<HTML>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- Created on November, 25  2003 by texi2html 1.64 -->
-<!-- 
-Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on January 7, 2014 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
             Olaf Bachmann <obachman@mathematik.uni-kl.de>
             and many others.
-Maintained by: Olaf Bachmann <obachman@mathematik.uni-kl.de>
-Send bugs and suggestions to <texi2html@mathematik.uni-kl.de>
- 
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
 -->
-<HEAD>
-<TITLE>Bibweb Manual: </TITLE>
+<head>
+<title>Bibweb Manual</title>
 
-<META NAME="description" CONTENT="Bibweb Manual: ">
-<META NAME="keywords" CONTENT="Bibweb Manual: ">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
-<META NAME="Generator" CONTENT="texi2html 1.64">
+<meta name="description" content="Bibweb Manual">
+<meta name="keywords" content="Bibweb Manual">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
 
-</HEAD>
 
-<BODY LANG="" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+</head>
 
-<A NAME="SEC_Top"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1>Bibweb Manual</H1></P><P>
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-Bibweb is a perl script written by John Palmieri (in consultation with
+<h1>Bibweb Manual</h1>
+
+<strong>(info by John H. Palmieri)</strong><br>
+
+
+<p>Copyright &copy; 1997, 1998, 2000, 2003 John H. Palmieri
+</p>
+<p>Permission is granted to make and distribute verbatim copies of
+this manual provided the copyright notice and this permission notice
+are preserved on all copies.
+</p>
+
+<p>Permission is granted to copy and distribute modified versions of this
+manual under the conditions for verbatim copying, provided also that the
+section entitled &ldquo;Copying&rdquo; is included exactly as in the original, and
+provided that the entire resulting derived work is distributed under the
+terms of a permission notice identical to this one.
+</p>
+<p>Permission is granted to copy and distribute translations of this manual
+into another language, under the above conditions for modified versions,
+except that this permission notice may be stated in a translation
+approved by the Free Software Foundation.
+</p><hr>
+<a name="Top"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[ &lt; ]</td>
+<td valign="middle" align="left">[<a href="#Introduction" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Bibweb"></a>
+<h1 class="top">Bibweb</h1>
+
+<p>Bibweb is a perl script written by John Palmieri (in consultation with
 Bill Dwyer).
-</P><P>
-
-This is version 0.60, November 2003, of the Bibweb manual.  Bug reports
+</p>
+<p>This is version 0.60, November 2003, of the Bibweb manual.  Bug reports
 and suggestions for new features should go to
-<SAMP>`palmieri@math.washington.edu'</SAMP>.
-</P><P>
-
-This is the first version of this manual; it is done (except for the
+&lsquo;<samp>palmieri@math.washington.edu</samp>&rsquo;.
+</p>
+<p>This is the first version of this manual; it is done (except for the
 indices). 
-</P><P>
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Introduction">1 Introduction</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                Overview, quick instructions
+</td></tr>
+<tr><td align="left" valign="top"><a href="#How-to">2 How to</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      More detailed instructions
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Installation">3 Installation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                How to install
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">&mdash; The Detailed Node Listing &mdash;
 
-<BLOCKQUOTE><TABLE BORDER=0 CELLSPACING=0> 
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC1">1. Introduction</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Overview, quick instructions</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC2">2. How to</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">More detailed instructions</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC9">3. Installation</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">How to install</TD></TR>
-</TABLE>
+How to
 
-<br>
-How&nbsp;to
-<br>
+</pre></th></tr><tr><td align="left" valign="top"><a href="#LaTeX-file">2.1 LaTeX file</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               What your LaTeX file should look like
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Invoking-bibweb">2.2 Invoking bibweb</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             What bibweb does
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+LaTeX file
 
-<br>
-<TABLE BORDER=0 CELLSPACING=0>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC3">2.1 LaTeX file</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What your LaTeX file should look like</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC6">2.2 Invoking bibweb</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What bibweb does</TD></TR>
-</TABLE>
+</pre></th></tr><tr><td align="left" valign="top"><a href="#Bibliography-command">2.1.1 Bibliography command</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        What the \bibliography command should look like
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Citations">2.1.2 Citations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Formats for citations
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Invoking bibweb
 
-<br>
-LaTeX&nbsp;file
-<br>
+</pre></th></tr><tr><td align="left" valign="top"><a href="#Basic-operation">2.2.1 Basic operation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             Quick instructions
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Options">2.2.2 Options</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Options for running bibweb
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr></table>
 
-<br>
-<TABLE BORDER=0 CELLSPACING=0>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC4">2.1.1 Bibliography command</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What the \bibliography command should look like</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC5">2.1.2 Citations</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Formats for citations</TD></TR>
-</TABLE>
 
-<br>
-Invoking&nbsp;bibweb
-<br>
 
-<br>
-<TABLE BORDER=0 CELLSPACING=0>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC7">2.2.1 Basic operation</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Quick instructions</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC8">2.2.2 Options</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Options for running bibweb</TD></TR>
-</TABLE>
 
-<br>
-</BLOCKQUOTE>
-<P>
 
-<HR SIZE=1>
-<A NAME="SEC1"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[ &lt;&lt; ]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[ &gt;&gt; ]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<A NAME="Introduction"></A>
-<H1> 1. Introduction </H1>
-<!--docid::SEC1::-->
-<P>
+<hr size="6">
+<a name="Introduction"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#How-to" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#How-to" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Introduction-1"></a>
+<h1 class="chapter">1 Introduction</h1>
 
-Bibweb is a utility for automatically retrieving bibliographical
-information from the American Mathematical Society's MathSciNet search
-engine (available at <A HREF="http://www.ams.org/mathscinet">http://www.ams.org/mathscinet</A>).  (In
+<p>Bibweb is a utility for automatically retrieving bibliographical
+information from the American Mathematical Society&rsquo;s MathSciNet search
+engine (available at <a href="http://www.ams.org/mathscinet">http://www.ams.org/mathscinet</a>).  (In
 particular, in order to use bibweb, you must have access to MathSciNet,
 which means that you or your institution has at some point shelled out
 some quantity of money to the AMS.  Anyway...)
-</P><P>
-
-If you're too lazy to go to the library or use a web browser to find out
-bibliographical information for that ground-breaking paper you're
+</p>
+<p>If you&rsquo;re too lazy to go to the library or use a web browser to find out
+bibliographical information for that ground-breaking paper you&rsquo;re
 writing, then bibweb is the program for you.  It is intended for use
 with BibTeX (which means with LaTeX), and you have to write
-citations in a particular format, but that's about all there is to it.
-</P><P>
+citations in a particular format, but that&rsquo;s about all there is to it.
+</p>
+<p>Briefly: once you&rsquo;ve installed bibweb, if you are editing a file called
+&lsquo;<tt>bozo.tex</tt>&rsquo;, then you need to insert the following line:
+</p>
+<div class="example">
+<pre class="example">  \bibliography{bozo}
+</pre></div>
 
-Briefly: once you've installed bibweb, if you are editing a file called
-<TT>`bozo.tex'</TT>, then you need to insert the following line:
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \bibliography{bozo}
-</pre></td></tr></table></P><P>
-
-If you are also using the BibTeX file <TT>`junk.bib'</TT>, then you
+<p>If you are also using the BibTeX file &lsquo;<tt>junk.bib</tt>&rsquo;, then you
 should use the following line:
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  \bibliography{junk,bozo}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \bibliography{junk,bozo}
-</pre></td></tr></table></P><P>
-
-When you want to cite a paper whose bibliographical information you are
-lacking, say "Periodic phenomena in the Adams-Novikov spectral
-sequence" by H. R. Miller, D. C. Ravenel, and W. S. Wilson, then you
+<p>When you want to cite a paper whose bibliographical information you are
+lacking, say &ldquo;Periodic phenomena in the Adams-Novikov spectral
+sequence&rdquo; by H. R. Miller, D. C. Ravenel, and W. S. Wilson, then you
 give LaTeX the command
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  \cite{miller-ravenel-wilson-periodic}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{miller-ravenel-wilson-periodic}
-</pre></td></tr></table></P><P>
+<p>or
+</p>
+<div class="example">
+<pre class="example">  \cite{miller-ravenel-wilson-novikov}
+</pre></div>
 
-or
-</P><P>
+<p>or
+</p>
+<div class="example">
+<pre class="example">  \cite{miller-ravenel-wilson}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{miller-ravenel-wilson-novikov}
-</pre></td></tr></table></P><P>
+<p>or
+</p>
+<div class="example">
+<pre class="example">  \cite{miller-ravenel;adams-spectral}
+</pre></div>
 
-or
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{miller-ravenel-wilson}
-</pre></td></tr></table></P><P>
-
-or
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{miller-ravenel;adams-spectral}
-</pre></td></tr></table></P><P>
-
-When you run this through LaTeX, it won't find the citation (by
-assumption); BibTeX won't find a citation either.  When you run
+<p>When you run this through LaTeX, it won&rsquo;t find the citation (by
+assumption); BibTeX won&rsquo;t find a citation either.  When you run
 bibweb, though, by typing
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  bibweb bozo
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb bozo
-</pre></td></tr></table></P><P>
-
-at the shell prompt, then it takes your citation and queries
+<p>at the shell prompt, then it takes your citation and queries
 MathSciNet.  If it finds a match, it writes the bibliographic
-information, in BibTeX format, to the file <TT>`bozo.bib'</TT>.
-</P><P>
-
-Bibweb also lets you search for just a single citation, it lets you
+information, in BibTeX format, to the file &lsquo;<tt>bozo.bib</tt>&rsquo;.
+</p>
+<p>Bibweb also lets you search for just a single citation, it lets you
 specify the names of the input (TeX) and output (BibTeX) files
-separately, and has other options.  See section <A HREF="bibweb.html#SEC8">2.2.2 Options</A>, for details.
-</P><P>
+separately, and has other options.  See section <a href="#Options">Options</a>, for details.
+</p>
 
-<A NAME="How to"></A>
-<HR SIZE="6">
-<A NAME="SEC2"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC1"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[ &lt;&lt; ]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC9"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1> 2. How to </H1>
-<!--docid::SEC2::-->
-<P>
 
-In this section, we give detailed instructions for how to use bibweb.
-</P><P>
 
-<BLOCKQUOTE><TABLE BORDER=0 CELLSPACING=0> 
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC3">2.1 LaTeX file</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What your LaTeX file should look like</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC6">2.2 Invoking bibweb</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What bibweb does</TD></TR>
-</TABLE></BLOCKQUOTE>
-<P>
 
-<A NAME="LaTeX file"></A>
-<HR SIZE="6">
-<A NAME="SEC3"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC4"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC1"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H2> 2.1 LaTeX file </H2>
-<!--docid::SEC3::-->
-<P>
 
-In this section, we describe how to write your LaTeX file so that it
+
+<hr>
+<a name="How-to"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Introduction" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Introduction" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#LaTeX-file" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="How-to-1"></a>
+<h1 class="chapter">2 How to</h1>
+
+<p>In this section, we give detailed instructions for how to use bibweb.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#LaTeX-file">2.1 LaTeX file</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               What your LaTeX file should look like
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Invoking-bibweb">2.2 Invoking bibweb</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             What bibweb does
+</td></tr>
+</table>
+
+
+
+
+<hr>
+<a name="LaTeX-file"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#How-to" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#How-to" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Bibliography-command" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="LaTeX-file-1"></a>
+<h2 class="section">2.1 LaTeX file</h2>
+
+<p>In this section, we describe how to write your LaTeX file so that it
 will produce output suitable for bibweb.
-</P><P>
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Bibliography-command">2.1.1 Bibliography command</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        What the \bibliography command should look like
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Citations">2.1.2 Citations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Formats for citations
+</td></tr>
+</table>
 
-<BLOCKQUOTE><TABLE BORDER=0 CELLSPACING=0> 
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC4">2.1.1 Bibliography command</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">What the \bibliography command should look like</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC5">2.1.2 Citations</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Formats for citations</TD></TR>
-</TABLE></BLOCKQUOTE>
-<P>
 
-<A NAME="Bibliography command"></A>
-<HR SIZE="6">
-<A NAME="SEC4"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC5"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H3> 2.1.1 Bibliography command </H3>
-<!--docid::SEC4::-->
-<P>
+<hr>
+<a name="Bibliography-command"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#LaTeX-file" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#LaTeX-file" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Citations" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Bibliography-command-1"></a>
+<h3 class="subsection">2.1.1 Bibliography command</h3>
 
-You need to decide where you want to put the bibliographic information
-that bibweb will give you; this should be a file ending in <SAMP>`.bib'</SAMP>.
-Suppose you decide to use a file called <TT>`jimbob.bib'</TT> (which may or
+<p>You need to decide where you want to put the bibliographic information
+that bibweb will give you; this should be a file ending in &lsquo;<samp>.bib</samp>&rsquo;.
+Suppose you decide to use a file called &lsquo;<tt>jimbob.bib</tt>&rsquo; (which may or
 may not exist at this point).  Then you need the following line in your
 LaTeX file:
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  \bibliography{jimbob}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \bibliography{jimbob}
-</pre></td></tr></table></P><P>
-
-As indicated above, if you already have some other BibTeX files lying
-around, and you also want to use these (say they're called
-<TT>`manny.bib'</TT>, <TT>`moe.bib'</TT>, and <TT>`jack.bib'</TT>), 
+<p>As indicated above, if you already have some other BibTeX files lying
+around, and you also want to use these (say they&rsquo;re called
+&lsquo;<tt>manny.bib</tt>&rsquo;, &lsquo;<tt>moe.bib</tt>&rsquo;, and &lsquo;<tt>jack.bib</tt>&rsquo;), 
 then you should instead use the following line:
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  \bibliography{manny,moe,jack,jimbob}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \bibliography{manny,moe,jack,jimbob}
-</pre></td></tr></table></P><P>
 
-<A NAME="Citations"></A>
-<HR SIZE="6">
-<A NAME="SEC5"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC4"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H3> 2.1.2 Citations </H3>
-<!--docid::SEC5::-->
-<P>
 
-There are two different formats for citations that bibweb knows how to
+
+
+<hr>
+<a name="Citations"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Bibliography-command" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#LaTeX-file" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Invoking-bibweb" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Citations-1"></a>
+<h3 class="subsection">2.1.2 Citations</h3>
+
+<p>There are two different formats for citations that bibweb knows how to
 handle, and it handles them in different ways.
-</P><P>
-
-<UL>
-<LI>
+</p>
+<ul>
+<li>
 Simpler format:
-<P>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{aaa-bbb-ccc-ddd-year}
-</pre></td></tr></table></P><P>
+<div class="example">
+<pre class="example">  \cite{aaa-bbb-ccc-ddd-year}
+</pre></div>
 
-<SAMP>`aaa'</SAMP> gets sent as the author, <SAMP>`bbb'</SAMP>, <SAMP>`ccc'</SAMP>, and
-<SAMP>`ddd'</SAMP> get sent as miscellany (they can match anything, including
+<p>&lsquo;<samp>aaa</samp>&rsquo; gets sent as the author, &lsquo;<samp>bbb</samp>&rsquo;, &lsquo;<samp>ccc</samp>&rsquo;, and
+&lsquo;<samp>ddd</samp>&rsquo; get sent as miscellany (they can match anything, including
 the author, title, journal, reviewer, or the text of the review).
-<SAMP>`year'</SAMP> should be of the form <SAMP>`&#60;1995'</SAMP> or <SAMP>`&#62;1995'</SAMP> or
-<SAMP>`=1995'</SAMP> or <SAMP>`1995'</SAMP>, in which case bibweb only searches for
-papers from the appropriate years.  <SAMP>`1995'</SAMP> is treated the same as
-<SAMP>`=1995'</SAMP>.  It seems that specifying a year or range of years slows
+&lsquo;<samp>year</samp>&rsquo; should be of the form &lsquo;<samp>&lt;1995</samp>&rsquo; or &lsquo;<samp>&gt;1995</samp>&rsquo; or
+&lsquo;<samp>=1995</samp>&rsquo; or &lsquo;<samp>1995</samp>&rsquo;, in which case bibweb only searches for
+papers from the appropriate years.  &lsquo;<samp>1995</samp>&rsquo; is treated the same as
+&lsquo;<samp>=1995</samp>&rsquo;.  It seems that specifying a year or range of years slows
 things down tremendously, so you might want to avoid this.  Also, I
-think if <SAMP>`year'</SAMP> is in some other format, it will just get ignored.
-</P><P>
-
-For example, <SAMP>`\cite{devinatz-hopkins-nilpotence}'</SAMP> matches two
-papers: one is "Nilpotence and stable homotopy theory, I" by Devinatz,
-Hopkins, and Smith; the other is "Morava's change of rings theorem" by
-Devinatz, for which "Hopkins" and "nilpotence" are mentioned in the
+think if &lsquo;<samp>year</samp>&rsquo; is in some other format, it will just get ignored.
+</p>
+<p>For example, &lsquo;<samp>\cite{devinatz-hopkins-nilpotence}</samp>&rsquo; matches two
+papers: one is &ldquo;Nilpotence and stable homotopy theory, I&rdquo; by Devinatz,
+Hopkins, and Smith; the other is &ldquo;Morava&rsquo;s change of rings theorem&rdquo; by
+Devinatz, for which &ldquo;Hopkins&rdquo; and &ldquo;nilpotence&rdquo; are mentioned in the
 review.
-</P><P>
-
-If you want to avoid the second sort of match, you can use the more
+</p>
+<p>If you want to avoid the second sort of match, you can use the more
 involved format.
-</P><P>
-
-<LI>
+</p>
+</li><li>
 More involved format:
-<P>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{a1-a2-...-ak;t1-t2-...-tm;j1-j2-...jn;year}
-</pre></td></tr></table></P><P>
+<div class="example">
+<pre class="example">  \cite{a1-a2-...-ak;t1-t2-...-tm;j1-j2-...jn;year}
+</pre></div>
 
-<SAMP>`year'</SAMP> should be just like field <SAMP>`year'</SAMP> in the simpler format,
-but it slows things down, so I would avoid it.  <SAMP>`a1'</SAMP>, ...,
-<SAMP>`ak'</SAMP> are treated as authors, <SAMP>`t1'</SAMP>, ..., <SAMP>`tm'</SAMP> are treated
-as words in the title, <SAMP>`j1'</SAMP>, ..., <SAMP>`jn'</SAMP> are treated as words in
-the journal name.  You don't have to include all of the fields.
-</P><P>
-
-For example, <SAMP>`\cite{devinatz-hopkins;nilpotence}'</SAMP> matches only
-the paper "Nilpotence and stable homotopy theory, I" by Devinatz,
-Hopkins, and Smith.  <SAMP>`\cite{miller-wilkerson;vanishing-steenrod}'</SAMP>
-matches only "Vanishing lines for modules over the Steenrod algebra"
+<p>&lsquo;<samp>year</samp>&rsquo; should be just like field &lsquo;<samp>year</samp>&rsquo; in the simpler format,
+but it slows things down, so I would avoid it.  &lsquo;<samp>a1</samp>&rsquo;, ...,
+&lsquo;<samp>ak</samp>&rsquo; are treated as authors, &lsquo;<samp>t1</samp>&rsquo;, ..., &lsquo;<samp>tm</samp>&rsquo; are treated
+as words in the title, &lsquo;<samp>j1</samp>&rsquo;, ..., &lsquo;<samp>jn</samp>&rsquo; are treated as words in
+the journal name.  You don&rsquo;t have to include all of the fields.
+</p>
+<p>For example, &lsquo;<samp>\cite{devinatz-hopkins;nilpotence}</samp>&rsquo; matches only
+the paper &ldquo;Nilpotence and stable homotopy theory, I&rdquo; by Devinatz,
+Hopkins, and Smith.  &lsquo;<samp>\cite{miller-wilkerson;vanishing-steenrod}</samp>&rsquo;
+matches only &ldquo;Vanishing lines for modules over the Steenrod algebra&rdquo;
 by Miller and Wilkerson, as does
-<SAMP>`\cite{miller-wilkerson;vanishing-steenrod;;&#60;1985}'</SAMP>, as does
-<SAMP>`\cite{miller-wilkerson;vanishing-steenrod;pure;&#60;1985}'</SAMP> (the
-paper appeared in the <CITE>Journal of Pure and Applied Algebra</CITE>).
-</P><P>
-
-<LI>
+&lsquo;<samp>\cite{miller-wilkerson;vanishing-steenrod;;&lt;1985}</samp>&rsquo;, as does
+&lsquo;<samp>\cite{miller-wilkerson;vanishing-steenrod;pure;&lt;1985}</samp>&rsquo; (the
+paper appeared in the <cite>Journal of Pure and Applied Algebra</cite>).
+</p>
+</li><li>
 Using wildcards:
-<P>
 
-You can use <SAMP>`*'</SAMP> as a wildcard; for instance,
-<SAMP>`\cite{adams;hopf-invar*-one}'</SAMP> would return the two papers by
-Adams called "On the non-existence of elements of Hopf invariant one".
-</P><P>
-
-When using MathSciNet by hand, if you want to search for papers by Mike
-Hopkins, you could set the author field equal to <SAMP>`hopkins, m*'</SAMP>.  On
+<p>You can use &lsquo;<samp>*</samp>&rsquo; as a wildcard; for instance,
+&lsquo;<samp>\cite{adams;hopf-invar*-one}</samp>&rsquo; would return the two papers by
+Adams called &ldquo;On the non-existence of elements of Hopf invariant one&rdquo;.
+</p>
+<p>When using MathSciNet by hand, if you want to search for papers by Mike
+Hopkins, you could set the author field equal to &lsquo;<samp>hopkins, m*</samp>&rsquo;.  On
 the other hand, BibTeX treats commas as separators: if you give
-BibTeX the command <SAMP>`\cite{hopkins,m*;global}'</SAMP>, BibTeX will
-treat <SAMP>`hopkins'</SAMP> as one source and <SAMP>`m*;global'</SAMP> as another.  So
+BibTeX the command &lsquo;<samp>\cite{hopkins,m*;global}</samp>&rsquo;, BibTeX will
+treat &lsquo;<samp>hopkins</samp>&rsquo; as one source and &lsquo;<samp>m*;global</samp>&rsquo; as another.  So
 to get bibweb to do the right thing, you should use a period instead of
 a comma: use the command
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  \cite{hopkins.m*;global}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{hopkins.m*;global}
-</pre></td></tr></table></P><P>
-
-Bibweb will translate the <SAMP>`.'</SAMP> to a <SAMP>`,'</SAMP> before sending the
+<p>Bibweb will translate the &lsquo;<samp>.</samp>&rsquo; to a &lsquo;<samp>,</samp>&rsquo; before sending the
 query to MathSciNet, so this citation would produce
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>%% Math Reviews number: 89g:55022 
+</p>
+<div class="example">
+<pre class="example">%% Math Reviews number: 89g:55022 
 @incollection {hopkins.m*;global,
     AUTHOR = {Hopkins, Michael J.},
      TITLE = {Global methods in homotopy theory},
@@ -383,102 +440,112 @@ query to MathSciNet, so this citation would produce
   MRNUMBER = {89g:55022},
 MRREVIEWER = {Douglas C. Ravenel},
 }
-</pre></td></tr></table></P><P>
+</pre></div>
 
-</UL>
-<P>
+</li></ul>
 
-<A NAME="Invoking bibweb"></A>
-<HR SIZE="6">
-<A NAME="SEC6"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC5"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC7"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC9"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H2> 2.2 Invoking bibweb </H2>
-<!--docid::SEC6::-->
-<P>
 
-<BLOCKQUOTE><TABLE BORDER=0 CELLSPACING=0> 
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC7">2.2.1 Basic operation</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Quick instructions</TD></TR>
-<TR><TD ALIGN="left" VALIGN="TOP"><A HREF="bibweb.html#SEC8">2.2.2 Options</A></TD><TD>&nbsp;&nbsp;</TD><TD ALIGN="left" VALIGN="TOP">Options for running bibweb</TD></TR>
-</TABLE></BLOCKQUOTE>
-<P>
 
-<A NAME="Basic operation"></A>
-<HR SIZE="6">
-<A NAME="SEC7"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC8"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC9"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H3> 2.2.1 Basic operation </H3>
-<!--docid::SEC7::-->
-<P>
 
-In this section, we give the basic instructions for running bibweb, as
+
+<hr>
+<a name="Invoking-bibweb"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Citations" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#How-to" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Basic-operation" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Invoking-bibweb-1"></a>
+<h2 class="section">2.2 Invoking bibweb</h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Basic-operation">2.2.1 Basic operation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             Quick instructions
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Options">2.2.2 Options</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Options for running bibweb
+</td></tr>
+</table>
+
+
+
+
+
+
+
+<hr>
+<a name="Basic-operation"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Invoking-bibweb" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Invoking-bibweb" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Options" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Basic-operation-1"></a>
+<h3 class="subsection">2.2.1 Basic operation</h3>
+
+<p>In this section, we give the basic instructions for running bibweb, as
 well as a brief description of what bibweb does.
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  bibweb <var>file</var>
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb <VAR>file</VAR>
-</pre></td></tr></table></P><P>
+<p>will run bibweb on <var>file</var>.  For example, to run bibweb on the file
+&lsquo;<tt>elvis</tt>&rsquo;, you type
+</p>
+<div class="example">
+<pre class="example">  bibweb elvis
+</pre></div>
 
-will run bibweb on <VAR>file</VAR>.  For example, to run bibweb on the file
-<TT>`elvis'</TT>, you type
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb elvis
-</pre></td></tr></table></P><P>
-
-Then bibweb will run BibTeX on <TT>`elvis'</TT> and read through the list
+<p>Then bibweb will run BibTeX on &lsquo;<tt>elvis</tt>&rsquo; and read through the list
 of missing citations.  For each such citation, it searches MathSciNet,
-and writes its results to the file <TT>`elvis.bib'</TT>.  Once it has done
+and writes its results to the file &lsquo;<tt>elvis.bib</tt>&rsquo;.  Once it has done
 this, it runs BibTeX again, to make use of any new citations.  
-</P><P>
-
-If bibweb can't find the file <TT>`elvis.aux'</TT> (which it wants to pass
-to BibTeX), it prints an error message and stops.  If it can't write
-to <TT>`elvis.bib'</TT>, it should also print an error message and stop.
-</P><P>
-
-By "searches MathSciNet", I mean that it fires up a web browser that
+</p>
+<p>If bibweb can&rsquo;t find the file &lsquo;<tt>elvis.aux</tt>&rsquo; (which it wants to pass
+to BibTeX), it prints an error message and stops.  If it can&rsquo;t write
+to &lsquo;<tt>elvis.bib</tt>&rsquo;, it should also print an error message and stop.
+</p>
+<p>By &ldquo;searches MathSciNet&rdquo;, I mean that it fires up a web browser that
 goes to the MathSciNet site, gives it the appropriate query, gets the
-response, and then quits.  In recent versions of bibweb ---
-versions 0.50 and later -- it uses a web browser incorporated into
-perl.  (Older versions used a program like <SAMP>`lynx'</SAMP> or
-<SAMP>`wget'</SAMP> for web browsing.)
-</P><P>
-
-By "its results", I mean the following:
-</P><P>
-
-<UL>
-<LI>
+response, and then quits.  In recent versions of bibweb &mdash;
+versions 0.50 and later &mdash; it uses a web browser incorporated into
+perl.  (Older versions used a program like &lsquo;<samp>lynx</samp>&rsquo; or
+&lsquo;<samp>wget</samp>&rsquo; for web browsing.)
+</p>
+<p>By &ldquo;its results&rdquo;, I mean the following:
+</p>
+<ul>
+<li>
 If bibweb finds exactly one entry matching your citation, it puts it in
-<TT>`elvis.bib'</TT> with the key you chose.  For instance, if you have
-<P>
+&lsquo;<tt>elvis.bib</tt>&rsquo; with the key you chose.  For instance, if you have
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{kan-miller-splitting-spaces}
-</pre></td></tr></table></P><P>
+<div class="example">
+<pre class="example">  \cite{kan-miller-splitting-spaces}
+</pre></div>
 
-then bibweb puts something like the following in <TT>`elvis.bib'</TT>:
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>%%   citation 'kan-miller-splitting-spaces' 
+<p>then bibweb puts something like the following in &lsquo;<tt>elvis.bib</tt>&rsquo;:
+</p>
+<div class="example">
+<pre class="example">%%   citation 'kan-miller-splitting-spaces' 
 %% Math Reviews number: 57 #7582 
 @article {kan-miller-splitting-spaces, 
     AUTHOR = {Kan, Daniel M. and Miller, Edward Y.},
@@ -492,28 +559,27 @@ then bibweb puts something like the following in <TT>`elvis.bib'</TT>:
   MRNUMBER = {57 \#7582},
 MRREVIEWER = {J. P. May},
 }
-</pre></td></tr></table></P><P>
+</pre></div>
 
-<LI>
+</li><li>
 If it finds several matches (at most 5), it writes them all to
-<TT>`elvis.bib'</TT>, but leaves the original citation undefined.  (The new
+&lsquo;<tt>elvis.bib</tt>&rsquo;, but leaves the original citation undefined.  (The new
 ones have citations given by their Math Reviews numbers.)  So at this
-point, you have to edit <TT>`elvis.bib'</TT> to change the keys of the
-papers you're interested in, or you have to change your \cite command to
-match what was written into <TT>`elvis.bib'</TT>.
-<P>
+point, you have to edit &lsquo;<tt>elvis.bib</tt>&rsquo; to change the keys of the
+papers you&rsquo;re interested in, or you have to change your \cite command to
+match what was written into &lsquo;<tt>elvis.bib</tt>&rsquo;.
 
-For example, if you have
-</P><P>
+<p>For example, if you have
+</p>
+<div class="example">
+<pre class="example">  \cite{serre;faisceaux}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{serre;faisceaux}
-</pre></td></tr></table></P><P>
-
-then there are two matches (or maybe there are three, now), which get
-entered into <TT>`elvis.bib'</TT> as
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>%%   citation 'serre;faisceaux' 
+<p>then there are two matches (or maybe there are three, now), which get
+entered into &lsquo;<tt>elvis.bib</tt>&rsquo; as
+</p>
+<div class="example">
+<pre class="example">%%   citation 'serre;faisceaux' 
 %% Math Reviews number: 35 #3088 
 @article {MR35:3088,
     AUTHOR = {Serre, Jean-Pierre},
@@ -539,474 +605,401 @@ MRREVIEWER = {B. Shiffman},
   MRNUMBER = {16,953c},
 MRREVIEWER = {C. Chevalley},
 }
-</pre></td></tr></table></P><P>
+</pre></div>
 
-<LI>
-If there are more than 5 matches, it tells you that, and doesn't add any
-new entries to <TT>`elvis.bib'</TT>.  For example, if you have
-<P>
+</li><li>
+If there are more than 5 matches, it tells you that, and doesn&rsquo;t add any
+new entries to &lsquo;<tt>elvis.bib</tt>&rsquo;.  For example, if you have
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{serre}
-</pre></td></tr></table></P><P>
+<div class="example">
+<pre class="example">  \cite{serre}
+</pre></div>
 
-then bibweb adds the following to <TT>`elvis.bib'</TT>:
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>%%   citation 'serre' 
+<p>then bibweb adds the following to &lsquo;<tt>elvis.bib</tt>&rsquo;:
+</p>
+<div class="example">
+<pre class="example">%%   citation 'serre' 
 %% More than 5 matches found. 
-</pre></td></tr></table></P><P>
+</pre></div>
 
-You can change the number <SAMP>`5'</SAMP> to something else by using the
-<SAMP>`-m'</SAMP> option.  See section <A HREF="bibweb.html#SEC8">2.2.2 Options</A>.
-</P><P>
+<p>You can change the number &lsquo;<samp>5</samp>&rsquo; to something else by using the
+&lsquo;<samp>-m</samp>&rsquo; option.  See section <a href="#Options">Options</a>.
+</p>
+</li><li>
+If it doesn&rsquo;t find any matches, it tells you that, and doesn&rsquo;t add any
+new entries to &lsquo;<tt>elvis.bib</tt>&rsquo;.  For example, if you have
 
-<LI>
-If it doesn't find any matches, it tells you that, and doesn't add any
-new entries to <TT>`elvis.bib'</TT>.  For example, if you have
-<P>
+<div class="example">
+<pre class="example">  \cite{serre-kan}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{serre-kan}
-</pre></td></tr></table></P><P>
-
-then bibweb adds the following to <TT>`elvis.bib'</TT>:
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>%%   citation 'serre-kan' 
+<p>then bibweb adds the following to &lsquo;<tt>elvis.bib</tt>&rsquo;:
+</p>
+<div class="example">
+<pre class="example">%%   citation 'serre-kan' 
 %% No matches found. 
-</pre></td></tr></table></P><P>
+</pre></div>
 
-<LI>
+</li><li>
 Occasionally, bibweb will say it only finds one match, but it will add
-several things to <TT>`elvis.bib'</TT>.  This happens when there are several
+several things to &lsquo;<tt>elvis.bib</tt>&rsquo;.  This happens when there are several
 papers whose reviews are all together on MathSciNet (see
-<SAMP>`\cite{dwyer-kan;obstruction-theory-diagrams}'</SAMP>, for example).  In
+&lsquo;<samp>\cite{dwyer-kan;obstruction-theory-diagrams}</samp>&rsquo;, for example).  In
 these cases, bibweb ought to do a good job of assigning your chosen
 bibliographical key to the correct entry, but you might want to
 double-check.
-<P>
 
-</UL>
-<P>
+</li></ul>
 
-Finally, note that if you give the citation
-</P><P>
+<p>Finally, note that if you give the citation
+</p>
+<div class="example">
+<pre class="example">  \cite{serre}
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  \cite{serre}
-</pre></td></tr></table></P><P>
+<p>and run bibweb, then run bibweb again, it will not query MathSciNet
+again; instead it will tell you something like &ldquo;You&rsquo;ve searched for
+&lsquo;serre&rsquo; before&rdquo;.
+</p>
 
-and run bibweb, then run bibweb again, it will not query MathSciNet
-again; instead it will tell you something like "You've searched for
-`serre' before".
-</P><P>
 
-<A NAME="Options"></A>
-<HR SIZE="6">
-<A NAME="SEC8"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC7"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC9"> &gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC3"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC6"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC9"> &gt;&gt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H3> 2.2.2 Options </H3>
-<!--docid::SEC8::-->
-<P>
 
-bibweb can be run with several different options.
-</P><P>
+<hr>
+<a name="Options"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Basic-operation" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Invoking-bibweb" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Options-1"></a>
+<h3 class="subsection">2.2.2 Options</h3>
 
-<DL COMPACT>
-<DT><SAMP>`-i <VAR>file</VAR>'</SAMP>
-<DD><DT><SAMP>`--input=<VAR>file</VAR>'</SAMP>
-<DD>Run BibTeX on <VAR>file</VAR>.
-<P>
-
-<DT><SAMP>`-o <VAR>file</VAR>'</SAMP>
-<DD><DT><SAMP>`--output=<VAR>file</VAR>'</SAMP>
-<DD>Write output to <VAR>file</VAR> (after appending <SAMP>`.bib'</SAMP> to <VAR>file</VAR>,
+<p>bibweb can be run with several different options.
+</p>
+<dl compact="compact">
+<dt>&lsquo;<samp>-i <var>file</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--input=<var>file</var></samp>&rsquo;</dt>
+<dd><p>Run BibTeX on <var>file</var>.
+</p>
+</dd>
+<dt>&lsquo;<samp>-o <var>file</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--output=<var>file</var></samp>&rsquo;</dt>
+<dd><p>Write output to <var>file</var> (after appending &lsquo;<samp>.bib</samp>&rsquo; to <var>file</var>,
 if necessary).
-<P>
-
-<DT><SAMP>`--std'</SAMP>
-<DD>Write output to STDOUT (the screen, ordinarily).
-<P>
-
-<DT><SAMP>`-c <VAR>citation</VAR>'</SAMP>
-<DD><DT><SAMP>`--cite=<VAR>citation</VAR>'</SAMP>
-<DD>Look up only <VAR>citation</VAR>.  In this case, the output is written to the
-screen, unless you also use the <SAMP>`-o'</SAMP> option.
-<P>
-
-<DT><SAMP>`-m <VAR>num</VAR>'</SAMP>
-<DD><DT><SAMP>`--max=<VAR>num</VAR>'</SAMP>
-<DD>Return at most <VAR>num</VAR> matches to each citation.  Actually, if
-<VAR>num</VAR> is more than 50, I think bibweb returns at most 50 matches
+</p>
+</dd>
+<dt>&lsquo;<samp>--std</samp>&rsquo;</dt>
+<dd><p>Write output to STDOUT (the screen, ordinarily).
+</p>
+</dd>
+<dt>&lsquo;<samp>-c <var>citation</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--cite=<var>citation</var></samp>&rsquo;</dt>
+<dd><p>Look up only <var>citation</var>.  In this case, the output is written to the
+screen, unless you also use the &lsquo;<samp>-o</samp>&rsquo; option.
+</p>
+</dd>
+<dt>&lsquo;<samp>-m <var>num</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--max=<var>num</var></samp>&rsquo;</dt>
+<dd><p>Return at most <var>num</var> matches to each citation.  Actually, if
+<var>num</var> is more than 50, I think bibweb returns at most 50 matches
 to each citation.
-<P>
-
-<DT><SAMP>`-e <VAR>site</VAR>'</SAMP>
-<DD><DT><SAMP>`--emath=<VAR>site</VAR>'</SAMP>
-<DD>Search MathSciNet at the web site <VAR>site</VAR>.  The default value is read
-from the environment variable <VAR>MATHSCINET_SITE</VAR>; if this variable
-hasn't been set, the default is <SAMP>`www.ams.org'</SAMP>.  Some other good
-choices are <SAMP>`ams.rice.edu'</SAMP>, <SAMP>`ams.mathematik.uni-bielefeld.de'</SAMP>,
-<SAMP>`ams.mpim-bonn.mpg.de'</SAMP>, <SAMP>`ams.u-strasbg.fr'</SAMP>, and
-<SAMP>`ams.impa.br'</SAMP>---see
+</p>
+</dd>
+<dt>&lsquo;<samp>-e <var>site</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--emath=<var>site</var></samp>&rsquo;</dt>
+<dd><p>Search MathSciNet at the web site <var>site</var>.  The default value is read
+from the environment variable <var>MATHSCINET_SITE</var>; if this variable
+hasn&rsquo;t been set, the default is &lsquo;<samp>www.ams.org</samp>&rsquo;.  Some other good
+choices are &lsquo;<samp>ams.rice.edu</samp>&rsquo;, &lsquo;<samp>ams.mathematik.uni-bielefeld.de</samp>&rsquo;,
+&lsquo;<samp>ams.mpim-bonn.mpg.de</samp>&rsquo;, &lsquo;<samp>ams.u-strasbg.fr</samp>&rsquo;, and
+&lsquo;<samp>ams.impa.br</samp>&rsquo;&mdash;see
 the MathSciNet homepage for more information.  If you choose a value for
-<VAR>site</VAR> that's not from this list, bibweb prints a warning, but goes
+<var>site</var> that&rsquo;s not from this list, bibweb prints a warning, but goes
 ahead and tries to use it anyway.  You can use a bit of shorthand for
-<VAR>site</VAR>: <SAMP>`ams'</SAMP> stands for <SAMP>`www.ams.org'</SAMP>; <SAMP>`rice'</SAMP>
-stands for <SAMP>`ams.rice.edu'</SAMP>; <SAMP>`bielefeld'</SAMP> stands for
-<SAMP>`ams.mathematik.uni-bielefeld.de'</SAMP>; <SAMP>`bonn'</SAMP> stands for
-<SAMP>`ams.mpim-bonn.mpg.de'</SAMP>; <SAMP>`strasbg'</SAMP> stands for
-<SAMP>`ams.u-strasbg.fr'</SAMP>; and <SAMP>`impa'</SAMP> stands for
-<SAMP>`ams.impa.br'</SAMP>.
-<P>
-
-<DT><SAMP>`-sep <VAR>char</VAR>'</SAMP>
-<DD>Use <VAR>char</VAR> to delimit fields in long citation format, instead of
+<var>site</var>: &lsquo;<samp>ams</samp>&rsquo; stands for &lsquo;<samp>www.ams.org</samp>&rsquo;; &lsquo;<samp>rice</samp>&rsquo;
+stands for &lsquo;<samp>ams.rice.edu</samp>&rsquo;; &lsquo;<samp>bielefeld</samp>&rsquo; stands for
+&lsquo;<samp>ams.mathematik.uni-bielefeld.de</samp>&rsquo;; &lsquo;<samp>bonn</samp>&rsquo; stands for
+&lsquo;<samp>ams.mpim-bonn.mpg.de</samp>&rsquo;; &lsquo;<samp>strasbg</samp>&rsquo; stands for
+&lsquo;<samp>ams.u-strasbg.fr</samp>&rsquo;; and &lsquo;<samp>impa</samp>&rsquo; stands for
+&lsquo;<samp>ams.impa.br</samp>&rsquo;.
+</p>
+</dd>
+<dt>&lsquo;<samp>-sep <var>char</var></samp>&rsquo;</dt>
+<dd><p>Use <var>char</var> to delimit fields in long citation format, instead of
 semicolon (;)
-<P>
+</p>
+</dd>
+<dt>&lsquo;<samp>-b <var>backend</var></samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--bibtex=<var>backend</var></samp>&rsquo;</dt>
+<dd><p>Use <var>backend</var> as bibliography backend. The default value is &lsquo;<samp>bibtex</samp>&rsquo;.
+</p>
+</dd>
+<dt>&lsquo;<samp>-lax</samp>&rsquo;</dt>
+<dd><p>Use &lsquo;<samp>%</samp>&rsquo; to comment lines in BibTeX.  The default behavior is to
+use &lsquo;<samp>@comment</samp>&rsquo; as the comment character &ndash; this is officially
+supported by BibTeX, while &lsquo;<samp>%</samp>&rsquo; is not (although it seems to work).
+</p>
+</dd>
+<dt>&lsquo;<samp>-h</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>--help</samp>&rsquo;</dt>
+<dd><p>Print a short help message, and then quit.
+</p>
+</dd>
+</dl>
 
-<DT><SAMP>`-lax'</SAMP>
-<DD>Use <SAMP>`%'</SAMP> to comment lines in BibTeX.  The default behavior is to
-use <SAMP>`@comment'</SAMP> as the comment character -- this is officially
-supported by BibTeX, while <SAMP>`%'</SAMP> is not (although it seems to work).
-<P>
 
-<DT><SAMP>`-h'</SAMP>
-<DD><DT><SAMP>`--help'</SAMP>
-<DD>Print a short help message, and then quit.
-<P>
-
-</DL>
-<P>
-
-For example, any of the following commands
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb -i test -o a -m 10
+<p>For example, any of the following commands
+</p>
+<div class="example">
+<pre class="example">  bibweb -i test -o a -m 10
   bibweb test -o a -m 10
   bibweb -o a -m 10 test
   bibweb --output=a --max=10 test
-</pre></td></tr></table></P><P>
+</pre></div>
 
-has bibweb read the file <TT>`text.aux'</TT> and write output to
-<TT>`a.bib'</TT>, returning at most 10 matches for each citation.
-</P><P>
+<p>has bibweb read the file &lsquo;<tt>text.aux</tt>&rsquo; and write output to
+&lsquo;<tt>a.bib</tt>&rsquo;, returning at most 10 matches for each citation.
+</p>
+<p>The command
+</p>
+<div class="example">
+<pre class="example">  bibweb --std -m 10 test
+</pre></div>
 
-The command
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb --std -m 10 test
-</pre></td></tr></table></P><P>
-
-reads <TT>`test.aux'</TT> and writes the output to the screen (or whatever
+<p>reads &lsquo;<tt>test.aux</tt>&rsquo; and writes the output to the screen (or whatever
 you have STDOUT set to).  The command
-</P><P>
+</p>
+<div class="example">
+<pre class="example">  bibweb --emath=ams.rice.edu bozo
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb --emath=ams.rice.edu bozo
-</pre></td></tr></table></P><P>
-
-reads <TT>`bozo.aux'</TT>, writes to <TT>`bozo.bib'</TT>, and uses
-<A HREF="ams.rice.edu">ams.rice.edu</A> for the MathSciNet search, as do the commands
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb --emath=rice bozo
+<p>reads &lsquo;<tt>bozo.aux</tt>&rsquo;, writes to &lsquo;<tt>bozo.bib</tt>&rsquo;, and uses
+<a href="ams.rice.edu">ams.rice.edu</a> for the MathSciNet search, as do the commands
+</p>
+<div class="example">
+<pre class="example">  bibweb --emath=rice bozo
   bibweb -e rice bozo
   bibweb bozo -e rice
-</pre></td></tr></table></P><P>
+</pre></div>
 
-The command
-</P><P>
+<p>The command
+</p>
+<div class="example">
+<pre class="example">  bibweb --emath=quack bozo
+</pre></div>
 
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb --emath=quack bozo
-</pre></td></tr></table></P><P>
-
-uses <SAMP>`quack'</SAMP> for the MathSciNet search.  In this case, bibweb will
-give a warning (since <SAMP>`quack'</SAMP> is not one of the recognized MathSciNet
+<p>uses &lsquo;<samp>quack</samp>&rsquo; for the MathSciNet search.  In this case, bibweb will
+give a warning (since &lsquo;<samp>quack</samp>&rsquo; is not one of the recognized MathSciNet
 sites), and will produce no usable results (it will be fast, though).
-</P><P>
+</p>
+<p>If you run the command
+</p>
+<div class="example">
+<pre class="example">  bibweb -m 23 -c 'serre'
+</pre></div>
 
-If you run the command
-</P><P>
-
-<TABLE><tr><td>&nbsp;</td><td class=example><pre>  bibweb -m 23 -c 'serre'
-</pre></td></tr></table></P><P>
-
-then bibweb will look for all articles with <SAMP>`serre'</SAMP> as the
+<p>then bibweb will look for all articles with &lsquo;<samp>serre</samp>&rsquo; as the
 author.  In this case, it will tell you that there were more than 50
 matches found.  In version 0.60 of bibweb, there is an upper
-limit of about 50 on the number of matches found -- if there are
+limit of about 50 on the number of matches found &mdash; if there are
 more matches than this, you have to refine your search criteria to
 narrow things down.
-</P><P>
+</p>
 
-<A NAME="Installation"></A>
-<HR SIZE="6">
-<A NAME="SEC9"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC8"> &lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[ &gt; ]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC2"> &lt;&lt; </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top"> Up </A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[ &gt;&gt; ]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT"> &nbsp; <TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1> 3. Installation </H1>
-<!--docid::SEC9::-->
-<P>
 
-This is complicated: put the file <TT>`bibweb'</TT> in your path and make
-sure it's executable.
-</P><P>
 
-That's it.
-</P><P>
 
-Actually, bibweb seems to require at least version 5.003 of perl, so if
+<hr>
+<a name="Installation"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#How-to" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Options" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt; ]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Installation-1"></a>
+<h1 class="chapter">3 Installation</h1>
+
+<p>This is complicated: put the file &lsquo;<tt>bibweb</tt>&rsquo; in your path and make
+sure it&rsquo;s executable.
+</p>
+<p>That&rsquo;s it.
+</p>
+<p>Actually, bibweb seems to require at least version 5.003 of perl, so if
 you have an older version, you may have to upgrade.
-</P><P>
-
-And of course, to use bibweb at all, you need to have a subscription to
+</p>
+<p>And of course, to use bibweb at all, you need to have a subscription to
 MathSciNet.
-</P><P>
+</p>
 
-<HR SIZE="6">
-<A NAME="SEC_Contents"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1>Table of Contents</H1>
-<UL>
-<A NAME="TOC1" HREF="bibweb.html#SEC1">1. Introduction</A>
-<BR>
-<A NAME="TOC2" HREF="bibweb.html#SEC2">2. How to</A>
-<BR>
-<UL>
-<A NAME="TOC3" HREF="bibweb.html#SEC3">2.1 LaTeX file</A>
-<BR>
-<UL>
-<A NAME="TOC4" HREF="bibweb.html#SEC4">2.1.1 Bibliography command</A>
-<BR>
-<A NAME="TOC5" HREF="bibweb.html#SEC5">2.1.2 Citations</A>
-<BR>
-</UL>
-<A NAME="TOC6" HREF="bibweb.html#SEC6">2.2 Invoking bibweb</A>
-<BR>
-<UL>
-<A NAME="TOC7" HREF="bibweb.html#SEC7">2.2.1 Basic operation</A>
-<BR>
-<A NAME="TOC8" HREF="bibweb.html#SEC8">2.2.2 Options</A>
-<BR>
-</UL>
-</UL>
-<A NAME="TOC9" HREF="bibweb.html#SEC9">3. Installation</A>
-<BR>
-</UL>
-<HR SIZE=1>
-<A NAME="SEC_OVERVIEW"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1>Short Table of Contents</H1>
-<BLOCKQUOTE>
-<A NAME="TOC1" HREF="bibweb.html#SEC1">1. Introduction</A>
-<BR>
-<A NAME="TOC2" HREF="bibweb.html#SEC2">2. How to</A>
-<BR>
-<A NAME="TOC9" HREF="bibweb.html#SEC9">3. Installation</A>
-<BR>
 
-</BLOCKQUOTE>
-<HR SIZE=1>
-<A NAME="SEC_About"></A>
-<TABLE CELLPADDING=1 CELLSPACING=1 BORDER=0>
-<TR><TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Top">Top</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_Contents">Contents</A>]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[Index]</TD>
-<TD VALIGN="MIDDLE" ALIGN="LEFT">[<A HREF="bibweb.html#SEC_About"> ? </A>]</TD>
-</TR></TABLE>
-<H1>About this document</H1>
-This document was generated by <I>John Palmieri</I> on <I>November, 25  2003</I>
-using <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html
-"><I>texi2html</I></A>
-<P></P>  
-The buttons in the navigation panels have the following meaning:
-<P></P>
-<table border = "1">
-<TR>
-<TH> Button </TH>
-<TH> Name </TH>
-<TH> Go to </TH>
-<TH> From 1.2.3 go to</TH>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ &lt; ] </TD>
-<TD ALIGN="CENTER">
-Back
-</TD>
-<TD>
-previous section in reading order
-</TD>
-<TD>
-1.2.2
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ &gt; ] </TD>
-<TD ALIGN="CENTER">
-Forward
-</TD>
-<TD>
-next section in reading order
-</TD>
-<TD>
-1.2.4
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ &lt;&lt; ] </TD>
-<TD ALIGN="CENTER">
-FastBack
-</TD>
-<TD>
-previous or up-and-previous section 
-</TD>
-<TD>
-1.1
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ Up ] </TD>
-<TD ALIGN="CENTER">
-Up
-</TD>
-<TD>
-up section
-</TD>
-<TD>
-1.2
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ &gt;&gt; ] </TD>
-<TD ALIGN="CENTER">
-FastForward
-</TD>
-<TD>
-next or up-and-next section
-</TD>
-<TD>
-1.3
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [Top] </TD>
-<TD ALIGN="CENTER">
-Top
-</TD>
-<TD>
-cover (top) of document
-</TD>
-<TD>
- &nbsp; 
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [Contents] </TD>
-<TD ALIGN="CENTER">
-Contents
-</TD>
-<TD>
-table of contents
-</TD>
-<TD>
- &nbsp; 
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [Index] </TD>
-<TD ALIGN="CENTER">
-Index
-</TD>
-<TD>
-concept index
-</TD>
-<TD>
- &nbsp; 
-</TD>
-</TR>
-<TR>
-<TD ALIGN="CENTER">
- [ ? ] </TD>
-<TD ALIGN="CENTER">
-About
-</TD>
-<TD>
-this page
-</TD>
-<TD>
- &nbsp; 
-</TD>
-</TR>
-</TABLE>
-<P></P>
-where the <STRONG> Example </STRONG> assumes that the current position 
-is at <STRONG> Subsubsection One-Two-Three </STRONG> of a document of 
-the following structure:
-<UL>
-<LI> 1. Section One  </LI>
-<UL>
-<LI>1.1 Subsection One-One</LI>
-<UL>
-<LI> ... </LI>
-</UL>
-<LI>1.2 Subsection One-Two</LI>
-<UL>
-<LI>1.2.1 Subsubsection One-Two-One
-</LI><LI>1.2.2 Subsubsection One-Two-Two
-</LI><LI>1.2.3 Subsubsection One-Two-Three &nbsp; &nbsp; <STRONG>
-&lt;== Current Position </STRONG>
-</LI><LI>1.2.4 Subsubsection One-Two-Four
-</LI></UL>
-<LI>1.3 Subsection One-Three</LI>
-<UL>
-<LI> ... </LI>
-</UL>
-<LI>1.4 Subsection One-Four</LI>
-</UL>
-</UL>
+<hr size="6">
+<a name="SEC_Contents"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1>Table of Contents</h1>
 
-<HR SIZE=1>
-<BR>  
-<FONT SIZE="-1">
-This document was generated
-by <I>John Palmieri</I> on <I>November, 25  2003</I>
-using <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html
-"><I>texi2html</I></A>
+<div class="contents">
 
-</BODY>
-</HTML>
+<ul class="no-bullet">
+  <li><a name="toc-Introduction-1" href="#Introduction">1 Introduction</a></li>
+  <li><a name="toc-How-to-1" href="#How-to">2 How to</a>
+  <ul class="no-bullet">
+    <li><a name="toc-LaTeX-file-1" href="#LaTeX-file">2.1 LaTeX file</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Bibliography-command-1" href="#Bibliography-command">2.1.1 Bibliography command</a></li>
+      <li><a name="toc-Citations-1" href="#Citations">2.1.2 Citations</a></li>
+    </ul></li>
+    <li><a name="toc-Invoking-bibweb-1" href="#Invoking-bibweb">2.2 Invoking bibweb</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Basic-operation-1" href="#Basic-operation">2.2.1 Basic operation</a></li>
+      <li><a name="toc-Options-1" href="#Options">2.2.2 Options</a></li>
+    </ul>
+</li>
+  </ul></li>
+  <li><a name="toc-Installation-1" href="#Installation">3 Installation</a></li>
+</ul>
+</div>
+<hr>
+<a name="SEC_About"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1>About This Document</h1>
+
+<p>
+  This document was generated on <i>January 7, 2014</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+</p>
+<p>
+  The buttons in the navigation panels have the following meaning:
+</p>
+<table border="1">
+  <tr>
+    <th> Button </th>
+    <th> Name </th>
+    <th> Go to </th>
+    <th> From 1.2.3 go to</th>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt;&lt; ] </td>
+    <td align="center">FastBack</td>
+    <td>Beginning of this chapter or previous chapter</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt; ] </td>
+    <td align="center">Back</td>
+    <td>Previous section in reading order</td>
+    <td>1.2.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ Up ] </td>
+    <td align="center">Up</td>
+    <td>Up section</td>
+    <td>1.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt; ] </td>
+    <td align="center">Forward</td>
+    <td>Next section in reading order</td>
+    <td>1.2.4</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt;&gt; ] </td>
+    <td align="center">FastForward</td>
+    <td>Next chapter</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td align="center"> [Top] </td>
+    <td align="center">Top</td>
+    <td>Cover (top) of document</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Contents] </td>
+    <td align="center">Contents</td>
+    <td>Table of contents</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Index] </td>
+    <td align="center">Index</td>
+    <td>Index</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [ ? ] </td>
+    <td align="center">About</td>
+    <td>About (help)</td>
+    <td> &nbsp; </td>
+  </tr>
+</table>
+
+<p>
+  where the <strong> Example </strong> assumes that the current position is at <strong> Subsubsection One-Two-Three </strong> of a document of the following structure:
+</p>
+
+<ul>
+  <li> 1. Section One
+    <ul>
+      <li>1.1 Subsection One-One
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.2 Subsection One-Two
+        <ul>
+          <li>1.2.1 Subsubsection One-Two-One</li>
+          <li>1.2.2 Subsubsection One-Two-Two</li>
+          <li>1.2.3 Subsubsection One-Two-Three &nbsp; &nbsp;
+            <strong>&lt;== Current Position </strong></li>
+          <li>1.2.4 Subsubsection One-Two-Four</li>
+        </ul>
+      </li>
+      <li>1.3 Subsection One-Three
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.4 Subsection One-Four</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<p>
+ <font size="-1">
+  This document was generated on <i>January 7, 2014</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

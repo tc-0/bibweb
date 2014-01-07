@@ -16,7 +16,7 @@ Manual}.  Copyright @copyright{} 1997, 1998, 1999, 2000, 2003 John H. Palmieri
 @end ifinfo
 
 @titlepage
-@title{Bibweb Manual}
+@title Bibweb Manual
 
 @author (info by John H. Palmieri)
 
@@ -48,11 +48,11 @@ approved by the Free Software Foundation.
 @end titlepage
 @page
 
-@ifinfo
+@ifnottex
 @node top, Introduction, (dir), (dir)
 @comment node-name, next,          previous, up
 @top Bibweb
-@end ifinfo
+@end ifnottex
 
 Bibweb is a perl script written by John Palmieri (in consultation with
 Bill Dwyer).
@@ -580,6 +580,10 @@ stands for @samp{ams.rice.edu}; @samp{bielefeld} stands for
 @item -sep @var{char}
 Use @var{char} to delimit fields in long citation format, instead of
 semicolon (;)
+
+@item -b @var{backend}
+@itemx --bibtex=@var{backend}
+Use @var{backend} as bibliography backend. The default value is @samp{bibtex}.
 
 @item -lax
 Use @samp{%} to comment lines in Bib@TeX{}.  The default behavior is to

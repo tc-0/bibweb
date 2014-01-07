@@ -1,7 +1,7 @@
-This is bibweb.info, produced by makeinfo version 4.2 from bibweb.texi.
+This is bibweb.info, produced by makeinfo version 4.13 from bibweb.texi.
 
-   This is edition 0.60, November 2003, of the `Bibweb Manual'.
-Copyright (C) 1997, 1998, 1999, 2000, 2003 John H. Palmieri
+This is edition 0.60, November 2003, of the `Bibweb Manual'.  Copyright
+(C) 1997, 1998, 1999, 2000, 2003 John H. Palmieri
 
 
 File: bibweb.info,  Node: Top,  Next: Introduction,  Prev: (dir),  Up: (dir)
@@ -44,12 +44,12 @@ Invoking bibweb
 
 File: bibweb.info,  Node: Introduction,  Next: How to,  Prev: Top,  Up: Top
 
-Introduction
-************
+1 Introduction
+**************
 
-   Bibweb is a utility for automatically retrieving bibliographical
+Bibweb is a utility for automatically retrieving bibliographical
 information from the American Mathematical Society's MathSciNet search
-engine (available at <http://www.ams.org/mathscinet>).  (In particular,
+engine (available at `http://www.ams.org/mathscinet').  (In particular,
 in order to use bibweb, you must have access to MathSciNet, which means
 that you or your institution has at some point shelled out some
 quantity of money to the AMS.  Anyway...)
@@ -106,10 +106,10 @@ separately, and has other options.  *Note Options::, for details.
 
 File: bibweb.info,  Node: How to,  Next: Installation,  Prev: Introduction,  Up: Top
 
-How to
-******
+2 How to
+********
 
-   In this section, we give detailed instructions for how to use bibweb.
+In this section, we give detailed instructions for how to use bibweb.
 
 * Menu:
 
@@ -119,10 +119,10 @@ How to
 
 File: bibweb.info,  Node: LaTeX file,  Next: Invoking bibweb,  Prev: How to,  Up: How to
 
-LaTeX file
-==========
+2.1 LaTeX file
+==============
 
-   In this section, we describe how to write your LaTeX file so that it
+In this section, we describe how to write your LaTeX file so that it
 will produce output suitable for bibweb.
 
 * Menu:
@@ -133,14 +133,14 @@ will produce output suitable for bibweb.
 
 File: bibweb.info,  Node: Bibliography command,  Next: Citations,  Prev: LaTeX file,  Up: LaTeX file
 
-Bibliography command
---------------------
+2.1.1 Bibliography command
+--------------------------
 
-   You need to decide where you want to put the bibliographic
-information that bibweb will give you; this should be a file ending in
-`.bib'.  Suppose you decide to use a file called `jimbob.bib' (which
-may or may not exist at this point).  Then you need the following line
-in your LaTeX file:
+You need to decide where you want to put the bibliographic information
+that bibweb will give you; this should be a file ending in `.bib'.
+Suppose you decide to use a file called `jimbob.bib' (which may or may
+not exist at this point).  Then you need the following line in your
+LaTeX file:
 
        \bibliography{jimbob}
 
@@ -154,11 +154,11 @@ line:
 
 File: bibweb.info,  Node: Citations,  Prev: Bibliography command,  Up: LaTeX file
 
-Citations
----------
+2.1.2 Citations
+---------------
 
-   There are two different formats for citations that bibweb knows how
-to handle, and it handles them in different ways.
+There are two different formats for citations that bibweb knows how to
+handle, and it handles them in different ways.
 
    * Simpler format:
 
@@ -240,8 +240,8 @@ to handle, and it handles them in different ways.
 
 File: bibweb.info,  Node: Invoking bibweb,  Prev: LaTeX file,  Up: How to
 
-Invoking bibweb
-===============
+2.2 Invoking bibweb
+===================
 
 * Menu:
 
@@ -251,11 +251,11 @@ Invoking bibweb
 
 File: bibweb.info,  Node: Basic operation,  Next: Options,  Prev: Invoking bibweb,  Up: Invoking bibweb
 
-Basic operation
----------------
+2.2.1 Basic operation
+---------------------
 
-   In this section, we give the basic instructions for running bibweb,
-as well as a brief description of what bibweb does.
+In this section, we give the basic instructions for running bibweb, as
+well as a brief description of what bibweb does.
 
        bibweb FILE
 
@@ -388,10 +388,10 @@ again; instead it will tell you something like "You've searched for
 
 File: bibweb.info,  Node: Options,  Prev: Basic operation,  Up: Invoking bibweb
 
-Options
--------
+2.2.2 Options
+-------------
 
-   bibweb can be run with several different options.
+bibweb can be run with several different options.
 
 `-i FILE'
 `--input=FILE'
@@ -436,6 +436,10 @@ Options
      Use CHAR to delimit fields in long citation format, instead of
      semicolon (;)
 
+`-b BACKEND'
+`--bibtex=BACKEND'
+     Use BACKEND as bibliography backend. The default value is `bibtex'.
+
 `-lax'
      Use `%' to comment lines in BibTeX.  The default behavior is to
      use `@comment' as the comment character - this is officially
@@ -444,6 +448,7 @@ Options
 `-h'
 `--help'
      Print a short help message, and then quit.
+
 
    For example, any of the following commands
 
@@ -464,7 +469,7 @@ have STDOUT set to).  The command
 
        bibweb --emath=ams.rice.edu bozo
 
-reads `bozo.aux', writes to `bozo.bib', and uses <ams.rice.edu> for the
+reads `bozo.aux', writes to `bozo.bib', and uses `ams.rice.edu' for the
 MathSciNet search, as do the commands
 
        bibweb --emath=rice bozo
@@ -492,11 +497,11 @@ have to refine your search criteria to narrow things down.
 
 File: bibweb.info,  Node: Installation,  Prev: How to,  Up: Top
 
-Installation
-************
+3 Installation
+**************
 
-   This is complicated: put the file `bibweb' in your path and make
-sure it's executable.
+This is complicated: put the file `bibweb' in your path and make sure
+it's executable.
 
    That's it.
 
@@ -509,15 +514,15 @@ to MathSciNet.
 
 
 Tag Table:
-Node: Top198
-Node: Introduction1196
+Node: Top197
+Node: Introduction1195
 Node: How to3287
-Node: LaTeX file3590
-Node: Bibliography command3963
-Node: Citations4698
-Node: Invoking bibweb8322
-Node: Basic operation8552
-Node: Options13537
-Node: Installation16834
+Node: LaTeX file3591
+Node: Bibliography command3969
+Node: Citations4712
+Node: Invoking bibweb8345
+Node: Basic operation8583
+Node: Options13577
+Node: Installation16990
 
 End Tag Table
